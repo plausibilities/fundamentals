@@ -1,4 +1,5 @@
 import pymc3 as pm
+import collections
 import arviz as az
 
 
@@ -13,6 +14,10 @@ class Gaussian:
 
         self.independent = independent
         self.dependent = dependent
+
+        self.ModelFeatures = collections.namedtuple(
+            typename='ModelFeatures',
+            field_names=['model', 'trace', 'maximal', 'arviztrace', 'likelihood'])
 
     def inference(self):
 
@@ -40,4 +45,5 @@ class Gaussian:
             # The trace generated from Markov Chain Monte Carlo sampling
             arviztrace = az.from_pymc3(trace=trace)
 
-        return model, trace, maximal, arviztrace, likelihood
+        # noinspection PyUnresolvedReferences,PyProtectedMember
+        return self.ModelFeatures._make([model, trace, maximal, arviztrace, likelihood])
