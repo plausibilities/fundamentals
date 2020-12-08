@@ -59,7 +59,7 @@ class Linear:
 
         return abscissae, ordinates
 
-    def exc(self, anomalies: True):
+    def exc(self, anomalies: bool = True):
         """
 
         :param anomalies:
