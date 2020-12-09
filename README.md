@@ -1,8 +1,35 @@
-## Fundamentals
+**In progress ...**
 
-In progress
+
+# Fundamentals
+
+Pending
+
+* mybinder.org
+
+* GitHub Actions
+
+* Docker
 
 <br>
+<br>
+
+Analysing, modelling, forecasting, etc., amidst uncertainty.
+
+Content
+
+* [Studies](#studies)  
+* [Development Notes](#development-notes)
+  * [Environment](#environment)
+  * [Requirements](#requirements)
+  * [Graphing](#graphing)
+* [References](#references)
+
+
+<br>
+<br>
+
+## Studies
 
 [Notebooks](./notebooks):
 
@@ -21,3 +48,83 @@ In progress
 
 <br>
 <br>
+
+## Development Notes
+
+### Environment
+
+The environment of the projects of *Uncertainty*
+
+```
+conda create --prefix ~/Anaconda3/envs/uncertainty
+```
+
+The installations are
+
+```bash
+conda install -c anaconda pymc3 # installs: python, theano, arviz, numpy, pandas
+conda install -c anaconda seaborn # installs: matplotlib
+conda install -c anaconda python-graphviz # installs: graphviz
+conda install -c anaconda pywin32 jupyterlab nodejs # installs: requests, urllib3
+pip install dotmap
+
+
+# For norms & testing
+conda install -c anaconda pytest coverage pylint pytest-cov
+
+# Upgrading PyMC3
+pip install --upgrade pymc3==3.9.3
+
+```
+
+### Requirements
+
+For project *fundamentals*
+
+```bash
+conda activate uncertainty
+pip freeze -r docs/filter.txt > requirements.txt
+```
+
+and
+
+```bash
+pylint --generate-rcfile > .pylintrc
+```
+
+### Graphing
+
+Aesthetics
+
+* [Matplotlib Style Sheets](https://matplotlib.org/3.1.0/gallery/style_sheets/style_sheets_reference.html), e.g., `plt.style.use('fivethirtyeight')`
+
+* Arviz, e.g., `az.style.use('arviz-darkgrid')`
+
+* [Seaborn](http://seaborn.pydata.org/api.html#themes), e.g., `sns.set_style("darkgrid")`, `sns.set_context("poster")`, `sns.set_color_codes("pastel")`
+
+<br>
+
+Layouts
+
+* [Constrained Layout](https://matplotlib.org/3.3.2/tutorials/intermediate/constrainedlayout_guide.html)
+
+* matplotlib.rcParams['figure.constrained_layout.use'] = False
+
+* plt.rcParams['figure.constrained_layout.use'] = False
+
+* plt.figure(constrained_layout=False)
+
+* [Adjust](https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.subplots_adjust.html): plt.tight_layout(pad=1.0, h_pad=1.5, w_pad=1.5, rect=(0,0,1,1))
+
+<br>
+<br>
+
+## References
+
+* [actions/checkout@v2](https://github.com/marketplace/actions/checkout)
+
+* [GitHub Glossary](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary)
+
+* [Google Colaboratory & GitHub](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb#scrollTo=8QAWNjizy_3O)
+
+* [Seaborn Graph Types](https://seaborn.pydata.org/api.html)
