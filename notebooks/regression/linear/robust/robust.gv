@@ -1,0 +1,25 @@
+digraph {
+	node [shape=circle]
+	intercept [label="intercept
+~
+Normal"]
+	degree [label="degree
+~
+DiscreteUniform"]
+	gradient [label="gradient
+~
+Normal"]
+	sigma [label="sigma
+~
+HalfCauchy"]
+	subgraph "cluster100 x 1" {
+		y [label="y
+~
+StudentT" style=filled]
+		label="100 x 1" labeljust=r labelloc=b style=rounded
+	}
+	intercept -> y
+	degree -> y
+	gradient -> y
+	sigma -> y
+}
