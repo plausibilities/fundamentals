@@ -1,0 +1,45 @@
+digraph {
+	node [shape=circle]
+	gradientDrift [label="gradientDrift
+~
+Normal"]
+	intercept [label="intercept
+~
+GaussianRandomWalk"]
+	sigma_ [label="sigma_
+~
+HalfCauchy"]
+	interceptDrift [label="interceptDrift
+~
+Normal"]
+	gradient [label="gradient
+~
+GaussianRandomWalk"]
+	gradientDeviation [label="gradientDeviation
+~
+HalfCauchy"]
+	nu_ [label="nu_
+~
+Gamma"]
+	interceptDeviation [label="interceptDeviation
+~
+HalfCauchy"]
+	subgraph "cluster100 x 1" {
+		y [label="y
+~
+StudentT" style=filled]
+		regression [label="regression
+~
+Deterministic" shape=box]
+		label="100 x 1" labeljust=r labelloc=b style=rounded
+	}
+	gradientDrift -> gradient
+	gradientDeviation -> gradient
+	interceptDeviation -> intercept
+	interceptDrift -> intercept
+	gradient -> regression
+	intercept -> regression
+	regression -> y
+	nu_ -> y
+	sigma_ -> y
+}
