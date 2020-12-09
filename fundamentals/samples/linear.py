@@ -31,9 +31,9 @@ class Linear:
         indices = [5, 7, 9]
 
         if deterministic:
-            dependent[indices] = [8.5, 6.3, 9.2]
+            dependent[indices, :] = np.array([[8.5], [6.3], [9.2]])
         else:
-            dependent[indices] = np.random.uniform(low=5.5, high=6.5) * dependent[indices]
+            dependent[indices, :] = np.random.uniform(low=5.5, high=6.5) * dependent[indices, :]
 
         return dependent
 
@@ -44,7 +44,7 @@ class Linear:
         """
 
         return np.random.normal(loc=self.parameters.noiseloc, scale=self.parameters.noisescale,
-                                size=self.points)
+                                size=self.points)[:, None]
 
     def model(self) -> (np.ndarray, np.ndarray):
         """
@@ -57,7 +57,7 @@ class Linear:
 
         ordinates = (self.parameters.gradient * abscissae) + self.parameters.intercept
 
-        return abscissae, ordinates
+        return abscissae[:, None], ordinates[:, None]
 
     def exc(self, anomalies: bool = True):
         """

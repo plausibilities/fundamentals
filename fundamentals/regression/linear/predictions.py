@@ -42,10 +42,10 @@ class Predictions:
 
         if self.trace['intercept'].ndim == 1:
             values = self.trace['intercept'][indices, None] + \
-                     (self.trace['gradient'][indices, None] * self.abscissae[:, np.newaxis].T)
+                     (self.trace['gradient'][indices, None] * self.abscissae.T)
         else:
             values = self.trace['intercept'][indices] + \
-                     (self.trace['gradient'][indices] * self.abscissae[:, np.newaxis].T)
+                     (self.trace['gradient'][indices] * self.abscissae.T)
 
         return values.T
 
