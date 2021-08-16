@@ -15,7 +15,8 @@ rm -rf *.log
 
 # ArViz & PyMC3
 pip install arviz &> arviz.log
-pip install pymc3==3.9.3 &> pymc3.log
+pip install pymc3==3.11.2 &> logs/pymc3.log
+pip install scikit-learn==0.24.2 &> logs/learn.log
 
 
 # https://linux.die.net/man/1/wget
