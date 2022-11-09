@@ -24,6 +24,7 @@ Content
 * [Studies](#studies)  
 * [Development Notes](#development-notes)
   * [Environment](#environment)
+  * [Environment Updates](#environment-updates)  
   * [Requirements](#requirements)
   * [Graphing](#graphing)
 * [References](#references)
@@ -82,7 +83,7 @@ pip install --upgrade pymc3==3.9.3
 
 <br>
 
-### Updates
+### Environment Updates
 
 Update `python` via `conda install -c anaconda python==3.8.13`, `numpy` via `conda update -c anaconda numpy`, `pandas` 
 via `conda update -c anaconda pandas`.  
