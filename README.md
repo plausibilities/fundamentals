@@ -3,6 +3,7 @@
 **Plausibilities**
 
 <br>
+<br>
 
 # Fundamentals
 
@@ -79,9 +80,19 @@ pip install --upgrade pymc3==3.9.3
 
 ```
 
-Update `numpy` via `conda update -c anaconda numpy`, `python` via `conda install -c anaconda python==3.8.13`.  In 
-terms of `pymc3` & `pymc` &Rarr; `pip unistall pymc3`, 
-subsequently `pip install pymc`. (ref. [conda commands](https://docs.conda.io/projects/conda/en/latest/commands.html))
+<br>
+
+### Updates
+
+Update `python` via `conda install -c anaconda python==3.8.13`, `numpy` via `conda update -c anaconda numpy`, `pandas` 
+via `conda update -c anaconda pandas`.  
+
+In terms of `pymc3` & `pymc` &Rarr; `pip unistall pymc3`, subsequently `pip install pymc`. Update `pymc` 
+via `pip install --upgrade pymc`
+
+Reference:  [conda commands](https://docs.conda.io/projects/conda/en/latest/commands.html)
+
+<br>
 
 ### Requirements
 
@@ -97,6 +108,8 @@ and
 ```bash
 pylint --generate-rcfile > .pylintrc
 ```
+
+<br>
 
 ### Graphing
 
