@@ -1,14 +1,16 @@
-**In progress ...**
+<br>
 
+**Plausibilities**
+
+<br>
 
 # Fundamentals
 
-Pending
+Upcoming
 
 * mybinder.org
-
+* CodeSpaces  
 * GitHub Actions
-
 * Docker
 
 <br>
@@ -77,6 +79,10 @@ pip install --upgrade pymc3==3.9.3
 
 ```
 
+Update `numpy` via `conda update -c anaconda numpy`, `python` via `conda install -c anaconda python==3.8.13`.  In 
+terms of `pymc3` & `pymc` &Rarr; `pip unistall pymc3`, 
+subsequently `pip install pymc`. (ref. [conda commands](https://docs.conda.io/projects/conda/en/latest/commands.html))
+
 ### Requirements
 
 For project *fundamentals*
@@ -121,10 +127,24 @@ Layouts
 
 ## References
 
+* [PyMC](https://www.pymc.io/welcome.html)
 * [actions/checkout@v2](https://github.com/marketplace/actions/checkout)
-
 * [GitHub Glossary](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary)
-
 * [Google Colaboratory & GitHub](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb#scrollTo=8QAWNjizy_3O)
-
 * [Seaborn Graph Types](https://seaborn.pydata.org/api.html)
+* [``pip`` commands](https://pip.pypa.io/en/stable/cli/)
+* [``conda`` commands](https://docs.conda.io/projects/conda/en/latest/commands.html)  
+* [The ``Anaconda`` repository](https://anaconda.org/anaconda/repo)
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
