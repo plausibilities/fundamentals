@@ -86,12 +86,18 @@ pip install --upgrade pymc3==3.9.3
 ### Environment Updates
 
 Update `python` via `conda install -c anaconda python==3.8.13`, `numpy` via `conda update -c anaconda numpy`, `pandas` 
-via `conda update -c anaconda pandas`.  
+via `conda update -c anaconda pandas`; for help 
+visit [conda commands](https://docs.conda.io/projects/conda/en/latest/commands.html)
 
 In terms of `pymc3` & `pymc` &Rarr; `pip unistall pymc3`, subsequently `pip install pymc`. Update `pymc` 
-via `pip install --upgrade pymc`
+via `pip install --upgrade pymc`.
 
-Reference:  [conda commands](https://docs.conda.io/projects/conda/en/latest/commands.html)
+Alternatively, a general update option, within an environment,is
+
+```shell
+  conda update -c anaconda --update-all
+```
+  
 
 <br>
 
