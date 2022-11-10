@@ -94,6 +94,13 @@ via `pip install --upgrade pymc`. &nbsp; An alternative [general] update option,
 ```shell
   conda update -c anaconda --update-all
 ```
+
+Extra
+
+````shell
+  conda install -c anaconda colorcet
+  conda install -c anaconda m2w64-toolchain_win-64
+````
   
 
 <br>
