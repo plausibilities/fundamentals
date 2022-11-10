@@ -1,14 +1,17 @@
-**In progress ...**
+<br>
 
+**Plausibilities**
+
+<br>
+<br>
 
 # Fundamentals
 
-Pending
+Upcoming
 
 * mybinder.org
-
+* CodeSpaces  
 * GitHub Actions
-
 * Docker
 
 <br>
@@ -21,6 +24,7 @@ Content
 * [Studies](#studies)  
 * [Development Notes](#development-notes)
   * [Environment](#environment)
+  * [Environment Updates](#environment-updates)  
   * [Requirements](#requirements)
   * [Graphing](#graphing)
 * [References](#references)
@@ -77,6 +81,23 @@ pip install --upgrade pymc3==3.9.3
 
 ```
 
+<br>
+
+### Environment Updates
+
+Update `python` via `conda install -c anaconda python==3.8.13`, `numpy` via `conda update -c anaconda numpy`, `pandas` 
+via `conda update -c anaconda pandas`; for help 
+visit [conda commands](https://docs.conda.io/projects/conda/en/latest/commands.html). &nbsp; In terms 
+of `pymc3` & `pymc` &Rarr; `pip unistall pymc3`, subsequently `pip install pymc`. &nbsp; Update `pymc` 
+via `pip install --upgrade pymc`. &nbsp; An alternative [general] update option, within an environment, is
+
+```shell
+  conda update -c anaconda --update-all
+```
+  
+
+<br>
+
 ### Requirements
 
 For project *fundamentals*
@@ -91,6 +112,8 @@ and
 ```bash
 pylint --generate-rcfile > .pylintrc
 ```
+
+<br>
 
 ### Graphing
 
@@ -121,10 +144,24 @@ Layouts
 
 ## References
 
+* [PyMC](https://www.pymc.io/welcome.html)
 * [actions/checkout@v2](https://github.com/marketplace/actions/checkout)
-
 * [GitHub Glossary](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary)
-
 * [Google Colaboratory & GitHub](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb#scrollTo=8QAWNjizy_3O)
-
 * [Seaborn Graph Types](https://seaborn.pydata.org/api.html)
+* [``pip`` commands](https://pip.pypa.io/en/stable/cli/)
+* [``conda`` commands](https://docs.conda.io/projects/conda/en/latest/commands.html)  
+* [The ``Anaconda`` repository](https://anaconda.org/anaconda/repo)
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
